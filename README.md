@@ -1,2 +1,2 @@
 # WebJiaoCheng
-Web图文教程
+其实就是要装exe，虽然是exe但是没有风险只是一个基于Electron的程序，Web套壳。
