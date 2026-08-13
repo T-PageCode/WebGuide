@@ -1,0 +1,54 @@
+{
+  "name": "WebGuide",
+  "version": "1.1.9",
+  "description": "T-PageCode",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-setup": "electron-builder --win nsis",
+    "build-win-setup": "electron-builder --win",
+    "build-win-32": "electron-builder --win nsis zip --ia32",
+    "build-all": "electron-builder --win nsis zip"
+  },
+  "keywords": ["electron", "editor", "T-PageCode"],
+  "author": "T-PageCode",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^43.0.0",
+    "electron-builder": "^24.13.0"
+  },
+  "build": {
+    "appId": "io.github.t-pagecode.webguide",
+    "productName": "",
+    "copyright": "Copyright © 2026 T-PageCode, Development.",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "T-PageCode",
+        "repo": "WebGuide"
+      }
+    ],
+    "icon": "Build/icon.ico",
+    "artifactName": "WebGuide-${version}-Setup.exe",
+    "compression": "maximum",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64", "ia32"]
+        }
+      ],
+      "icon": "Build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "WebGuide",
+      "installerIcon": "Build/icon.ico",
+      "uninstallerIcon": "Build/icon.ico"
+    }
+  }
+}

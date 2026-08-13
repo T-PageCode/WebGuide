@@ -1,0 +1,49 @@
+{
+  "name": "T-PageCode",
+  "version": "1.1.8",
+  "description": "T-PageCode",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-setup": "electron-builder --win nsis",
+    "build-win-setup": "electron-builder --win",
+    "build-linux": "electron-builder --linux deb rpm AppImage",
+    "build-all": "electron-builder --win nsis zip --linux deb rpm AppImage"
+  },
+  "keywords": ["electron", "editor", "T-PageCode"],
+  "author": "T-PageCode",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.0"
+  },
+  "build": {
+    "appId": "com.tpagecode.app",
+    "productName": "T-PageCode",
+    "copyright": "Copyright © 2026 T-PageCode",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "T-PageCode",
+        "repo": "WebJiaoCheng"
+      }
+    ],
+    "icon": "Build/icon.ico",
+    "artifactName": "T-PageCode-${version}-安装程序.exe",
+    "compression": "maximum",
+    "win": {
+      "target": "nsis",
+      "icon": "Build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "T-PageCode",
+      "installerIcon": "Build/icon.ico",
+      "uninstallerIcon": "Build/icon.ico"
+    }
+  }
+}
