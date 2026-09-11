@@ -8,7 +8,8 @@
     "build-setup": "electron-builder --win nsis",
     "build-win-setup": "electron-builder --win",
     "build-win-32": "electron-builder --win nsis zip --ia32",
-    "build-all": "electron-builder --win nsis zip"
+    "build-all": "electron-builder --win nsis zip",
+    "build-linux": "electron-builder --linux deb rpm AppImage"
   },
   "keywords": ["electron", "editor", "T-PageCode"],
   "author": "T-PageCode",

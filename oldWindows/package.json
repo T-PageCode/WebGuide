@@ -1,36 +1,39 @@
 {
-  "name": "T-PageCode-OldWin",
-  "version": "1.1.8",
-  "description": "T-PageCode for OldWindows Win7 Win8 Win8.1",
+  "name": "webguide-foroldwin",
+  "version": "1.2.0",
+  "description": "WebGuide for OldWindows Win7 Win8 Win8.1",
   "main": "app/main.js",
   "scripts": {
-    "start": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && electron .",
-    "build-setup": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && electron-builder --win nsis"
+    "start": "electron .",
+    "build-win": "electron-builder --win nsis zip"
   },
   "keywords": ["electron", "editor", "Win7", "Win8"],
   "author": "T-PageCode",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
   "type": "commonjs",
   "devDependencies": {
-    "electron": "^21.4.4",
+    "electron": "^20.4.4",
     "electron-builder": "^23.6.0"
   },
   "build": {
-    "appId": "io.github.t-pagecode.webjc.oldwin",
-    "productName": "T-PageCode-OldWindows",
+    "appId": "io.github.t-pagecode.webguide.oldwin",
+    "productName": "WebGuide - OldWindows",
     "copyright": "Copyright © 2026 T-PageCode",
     "publish": [
       {
         "provider": "github",
         "owner": "T-PageCode",
-        "repo": "WebJiaoCheng"
+        "repo": "WebGuide"
       }
     ],
     "icon": "Build/icon.ico",
-    "artifactName": "T-PageCode-${version}-oldWin-Setup.exe",
-    "compression": "maximum",
+    "artifactName": "WebGuide-${version}-oldWin-Setup.${ext}",
+    "compression": "store",
     "win": {
-      "target": "nsis",
+        "target": [
+            "nsis",
+            "zip"
+         ],
       "icon": "Build/icon.ico"
     },
     "nsis": {
@@ -39,7 +42,7 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "T-PageCode for oldWin",
+      "shortcutName": "WebGuide for oldWin",
       "installerIcon": "Build/icon.ico",
       "uninstallerIcon": "Build/icon.ico"
     }
