@@ -31,7 +31,7 @@
       }
     ],
     "icon": "Build/icon.ico",
-    "artifactName": "WebGuide-${version}-Setup.exe",
+    "artifactName": "WebGuide-${version}-Setup.${ext}",
     "compression": "maximum",
     "win": {
       "target": [
