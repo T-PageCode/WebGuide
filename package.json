@@ -1,6 +1,6 @@
 {
   "name": "WebGuide",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "T-PageCode",
   "main": "app/main.js",
   "scripts": {
